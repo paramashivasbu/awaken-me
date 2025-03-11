@@ -7,12 +7,12 @@ import MeditationAlarmApp from "./pages/MeditationAlarmApp";
 function App() {
   return (
     <Suspense fallback={<p>Loading...</p>}>
-      <>
+      <div>
         <Routes>
           <Route path="/" element={<MeditationAlarmApp />} />
         </Routes>
         {import.meta.env.VITE_TEMPO === "true" && useRoutes(routes)}
-      </>
+      </div>
     </Suspense>
   );
 }

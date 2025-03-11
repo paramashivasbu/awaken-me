@@ -1,30 +1,42 @@
-# React + TypeScript + Vite
+# Meditation Alarm App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A React application that replaces jarring alarm sounds with gentle voice prompts and soothing guided meditations that must complete before the alarm can be dismissed.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Time picker interface with smooth animations for setting alarm time
+- Library of guided meditations with varying lengths (5-15 minutes)
+- Gradual volume increase feature that starts very soft and builds slowly
+- Simple meditation progress indicator that shows time remaining
+- Alarms that require meditation completion before dismissal
 
-## Expanding the ESLint configuration
+## Running Locally
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+1. Clone the repository
+2. Install dependencies:
+   ```
+   npm install
+   ```
+3. Start the development server:
+   ```
+   npm run dev
+   ```
+4. Open your browser to the local server URL (typically http://localhost:5173)
 
-- Configure the top-level `parserOptions` property like this:
+## Building for Production
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
+To create a production build:
+
+```
+npm run build
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+The built files will be in the `dist` directory and can be served using any static file server.
+
+## Technologies Used
+
+- React
+- TypeScript
+- Tailwind CSS
+- ShadCN UI Components
+- Vite
